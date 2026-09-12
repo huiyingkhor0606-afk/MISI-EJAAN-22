@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffcf4a">
+  <title>Misi Ejaan 22 - Tahun 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky-decor decor-1">⭐</div>
+  <div class="sky-decor decor-2">☁️</div>
+  <div class="sky-decor decor-3">🌈</div>
+
+  <main class="app">
+    <section id="startScreen" class="screen active">
+      <div class="hero">
+        <div class="badge">📚 BAHASA MELAYU TAHUN 1</div>
+        <h1>🌟 Misi Ejaan 22 🌟</h1>
+        <p class="subtitle">Jom kenal, ingat dan pilih kosa kata yang betul!</p>
+        <img class="poster" src="assets/ejaan22.jpg" alt="Poster Kosa Kata Ejaan 22">
+      </div>
+
+      <div class="start-card">
+        <label for="studentName">👧👦 Nama murid</label>
+        <input id="studentName" type="text" maxlength="30" placeholder="Taip nama kamu di sini..." autocomplete="name">
+        <button id="startBtn" class="primary-btn">🚀 Mula Permainan</button>
+        <p class="hint">10 soalan • 3 pilihan jawapan • 1 markah setiap soalan</p>
+      </div>
+    </section>
+
+    <section id="quizScreen" class="screen">
+      <header class="quiz-header">
+        <div>
+          <span class="mini-label">Pemain</span>
+          <strong id="playerName"></strong>
+        </div>
+        <div class="score-pill">⭐ <span id="score">0</span></div>
+      </header>
+
+      <div class="progress-wrap">
+        <div class="progress-info">
+          <span id="questionNumber">Soalan 1 daripada 10</span>
+          <span id="progressPercent">10%</span>
+        </div>
+        <div class="progress-bar"><div id="progressFill"></div></div>
+      </div>
+
+      <article class="question-card">
+        <div id="questionVisual" class="question-visual">🔎</div>
+        <div class="question-tag">Pilih jawapan yang betul</div>
+        <h2 id="questionText"></h2>
+        <div id="options" class="options"></div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+        <button id="nextBtn" class="next-btn hidden">Seterusnya ➜</button>
+      </article>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="result-card">
+        <div id="resultEmoji" class="result-emoji">🏆</div>
+        <p class="mini-label">Permainan Tamat!</p>
+        <h1>Syabas, <span id="resultName"></span>! 🎉</h1>
+        <div class="result-score"><span id="finalScore">0</span><small>/10</small></div>
+        <p id="resultMessage" class="result-message"></p>
+
+        <div class="stars" id="stars"></div>
+
+        <div class="summary">
+          <div><strong id="correctCount">0</strong><span>Betul</span></div>
+          <div><strong id="wrongCount">0</strong><span>Salah</span></div>
+          <div><strong id="percentage">0%</strong><span>Skor</span></div>
+        </div>
+
+        <button id="restartBtn" class="primary-btn">🔄 Main Semula</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>🌱 Belajar hari ini untuk masa depan yang lebih cerah! 🌈</footer>
+  <script src="script.js"></script>
+</body>
+</html>
